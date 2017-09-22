@@ -1,0 +1,30 @@
+\documentclass{beamer}
+
+\usetheme{metropolis}  % Use metropolis theme
+
+%%
+% Configure type font
+\setmonofont{Fira Mono}
+
+%%
+% Configure math typesetting
+\usefonttheme{professionalfonts}  % required for mathspec
+\usepackage{mathspec}
+\setsansfont[BoldFont={Fira Sans Book}, Numbers={OldStyle}]{Adobe Garamond Pro}
+\setmathsfont(Digits)[Numbers={Lining, Proportional}]{Adobe Garamond Pro}
+
+%%
+% Configure colors
+\setbeamercolor{frametitle}{bg=normal text.bg, fg=normal text.fg}
+
+%%
+% Configure title graphic positioning
+\setbeamertemplate{title graphic}{%
+  \vbox to 0pt {
+    \vspace*{.75\textheight}  % change the value as necessary
+    \hfill\inserttitlegraphic%
+  }%
+  \nointerlineskip%
+}
+
+\input{notes.tex}
